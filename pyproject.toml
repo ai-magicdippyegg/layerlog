@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "layerlog"
+version = "1.0.0"
+description = "A tiny local command-line logbook for 3D prints"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LayerLog contributors" }]
+dependencies = []
+
+[project.scripts]
+layerlog = "layerlog.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
